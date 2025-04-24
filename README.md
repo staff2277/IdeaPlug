@@ -1,1 +1,3 @@
 # IdeaPlug
+
+A blog app
