@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="{% static 'css/output.css' %}" rel="stylesheet">
     <title>{% block title %}My Blog{% endblock title %}</title>
   </head>
   <body>
@@ -12,7 +12,8 @@
       <span
         ><img src="{% static 'images/Ideaplug-black.png' %}" alt="Logo"
       /></span>
-      <ul>
+
+      <ul >
         <a href="#"><li>My Blogs</li></a>
         <a href="#"
           ><li>

@@ -1,0 +1,16 @@
+{
+  "name": "ideaplug",
+  "version": "1.0.0",
+  "description": "A blog app",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/tailwindcss -i ./static/src/input.css -o ./static/css/output.css --watch",
+    "dev": "./node_modules/.bin/tailwindcss -i ./static/src/input.css -o ./static/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.0"
+  }
+}
