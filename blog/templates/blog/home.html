@@ -1,6 +1,8 @@
 {% extends '_base.html' %}
 
-{% block title %}Home{% endblock title %}
+{% block title %}
+  Home
+{% endblock %}
 
 {% block content %}
   {% if user.is_authenticated %}
@@ -16,4 +18,4 @@
   {% endif %}
 
   <h1>This is home</h1>
-{% endblock content %}
+{% endblock %}
