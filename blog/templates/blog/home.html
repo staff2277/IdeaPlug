@@ -1,13 +1,17 @@
 {% extends '_base.html' %} {% load static %} {% block title %}
   Home
 {% endblock %} {% block content %}
-  <div class="px-[5rem] border-2 border-black h-[70vh] overflow-hidden object-cover">
+  <div class="px-[5rem] border-2 border-black h-[70vh] object-cover">
     <h1 class="text-[4rem]">Recent Posts</h1>
-    <div class="border-2 border-red-600 w-full">
-      <a href="#" class="">
-        <span class=""><img class="h-[70%] w-full" src="{% static 'images/banner3.jpg' %}" alt="Banner image" /></span>
-        <h2 class="text-[2rem]">This is the title</h2>
-      </a>
-    </div>
+
+    {% for post in blogPost %}
+      <div class="border-2 border-red-600 w-full">
+        <span class="max-h-[50%] border-2 border-black"><img class="w-[80%]" src="{{ post.bg_image }}" alt="Banner image" /></span>
+        <h2 class="text-[3rem] mt-[2rem]">{{ post.title }}</h2>
+        <p class="text-[1.5rem] mt-[1rem]">{{ post.sub_title }}</p>
+        <p class="text-[1rem]">{{ post.main_content }}</p>
+        <p>Posted By {{ post.user }}</p>
+      </div>
+    {% endfor %}
   </div>
 {% endblock %}
