@@ -39,11 +39,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_browser_reload",
     "blog",
     "comments",
     "users",
 ]
-""" "django_browser_reload", """
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

@@ -1,11 +1,11 @@
 {% extends '_base.html' %} {% load static %} {% block title %}
   Home
 {% endblock %} {% block content %}
-  <div class="mx-[5rem] border-2 border-black h-[70vh]">
+  <div class="px-[5rem] border-2 border-black h-[70vh] overflow-hidden object-cover">
     <h1 class="text-[4rem]">Recent Posts</h1>
     <div class="border-2 border-red-600 w-full">
       <a href="#" class="">
-        <span class="overflow-hidden object-center w-full"><img class="w-[100%]" src="{% static 'images/banner3.jpg' %}" alt="Banner image" /></span>
+        <span class=""><img class="h-[70%] w-full" src="{% static 'images/banner3.jpg' %}" alt="Banner image" /></span>
         <h2 class="text-[2rem]">This is the title</h2>
       </a>
     </div>
