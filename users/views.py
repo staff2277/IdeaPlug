@@ -3,5 +3,5 @@ from .forms import UserRegistration
 
 
 class SignupView(FormView):
-    template_name = 'users/signup.html'
+    template_name = "users/signup.html"
     form_class = UserRegistration
