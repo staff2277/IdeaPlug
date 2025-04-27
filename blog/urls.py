@@ -5,5 +5,5 @@ app_name = "blog"
 
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
-    path("", NewBlogBView.as_view(), name="new_blog"),
+    path("blog/new_blog", NewBlogBView.as_view(), name="new_blog"),
 ]

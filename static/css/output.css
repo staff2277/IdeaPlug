@@ -683,6 +683,10 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.text-\[3rem\] {
+  font-size: 3rem;
+}
+
 * {
   font-family: "Roboto";
   box-sizing: border-box;

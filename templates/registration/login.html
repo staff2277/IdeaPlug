@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-  </head>
-  <body>
-      <form action="{% url 'login' %}" method="POST">
-        {% csrf_token %} {{form.as_p}}
-        <input
-          class="px-7 py-2 bg-green-400 hover:cursor-pointer hover:bg-green-300 rounded"
-          type="submit"
-          value="Login"
-        />
-        <input type="hidden" name="next" value="{{next}}" />
-      </form>
-    </div>
-  </body>
-</html>
+{% extends '_base.html' %}
+
+{% block title %}
+  Login
+{% endblock %}
+
+{% block content %}
+  <form action="{% url 'login' %}" method="POST">
+    {% csrf_token %} {{ form.as_p }}
+    <input class="px-7 py-2 bg-green-400 hover:cursor-pointer hover:bg-green-300 rounded" type="submit" value="Login" />
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+{% endblock %}
