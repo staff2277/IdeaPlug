@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% load django_browser_reload %} {% load static %}
+  {% comment %} {% load django_browser_reload %} {% endcomment %} {% load static %}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +42,6 @@
       {% endblock %}
     </div>
 
-    {% django_browser_reload_script %}
+    {% comment %} {% django_browser_reload_script %} {% endcomment %}
   </body>
 </html>
