@@ -1,53 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% load django_browser_reload %}
-  {% load static %}
+  {% load django_browser_reload %} {% load static %}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="{% static 'css/output.css' %}" rel="stylesheet">
-    <title>{% block title %}My Blog{% endblock title %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="{% static 'css/output.css' %}" rel="stylesheet" />
+    <title>
+      {% block title %}
+        My Blog
+      {% endblock %}
+    </title>
   </head>
   <body>
-    <nav class="flex border-2 border-black justify-between items-center fixed top-0 right-0 left-0 " >
-      <span
-      class="border-2"
-        ><img class="w-[200px]" src="{% static 'images/Ideaplug-black.png' %}" alt="Logo"
-      /></span>
+    <nav class="flex border-2 border-black justify-between items-center fixed top-0 right-0 left-0">
+      <a class="border-2" href="{% url 'blog:home' %}"><span class=""><img class="w-[200px]" src="{% static 'images/Ideaplug-black.png' %}" alt="Logo" /></span></a>
 
       <ul class="flex items-center border-2 *:pr-5">
         <a href="#"><li>My Blogs</li></a>
-        <a href="#"
-          ><li>
-            <img
-            class="w-[40px]"
-              src="{% static 'images/write.svg' %}"
-              alt="add new blog icon"
-            /></li
-        ></a>
-        <a href="#"
-          ><li>
-            <img
-            class="w-[40px]"
-
-              src="{% static 'images/notification.svg' %}"
-              alt="Notification icon"
-            /></li
-        ></a>
-        <a href="{% url 'signup' %}"
-          ><li>
-            <img
-            class="w-[70px]"
-              src="{% static 'images/profile.svg' %}"
-              alt="profile icon"
-            /></li
-        ></a>
+        <a href="#">
+          <li>
+            <img class="w-[40px]" src="{% static 'images/write.svg' %}" alt="add new blog icon" />
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <img class="w-[40px]" src="{% static 'images/notification.svg' %}" alt="Notification icon" />
+          </li>
+        </a>
+        <a href="{% url 'signup' %}">
+          <li>
+            <img class="w-[70px]" src="{% static 'images/profile.svg' %}" alt="profile icon" />
+          </li>
+        </a>
       </ul>
     </nav>
     <div class="mt-[5rem]">
+      {% block content %}
 
-      {% block content %}{% endblock content %}
+      {% endblock %}
     </div>
 
     {% django_browser_reload_script %}
