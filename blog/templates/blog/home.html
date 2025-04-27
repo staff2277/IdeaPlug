@@ -4,7 +4,7 @@
   <div class="px-[5rem] border-2 border-black h-[70vh] object-cover">
     <h1 class="text-[4rem]">Recent Posts</h1>
 
-    {% for post in blogPost %}
+    {% for post in blogPosts %}
       <div class="border-2 border-red-600 w-full">
         <span class="max-h-[50%] border-2 border-black"><img class="w-[80%]" src="{{ post.bg_image }}" alt="Banner image" /></span>
         <h2 class="text-[3rem] mt-[2rem]">{{ post.title }}</h2>
