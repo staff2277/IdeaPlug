@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
 from rest_framework.generics import ListAPIView
+from rest_framework.permissions import IsAuthenticated
 
 from .models import BlogPost, Employee
 from .serializers import EmployeeSerializer
