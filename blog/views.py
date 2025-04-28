@@ -1,7 +1,10 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
-from .models import BlogPost
+from rest_framework.generics import ListAPIView
+from .models import BlogPost, Employee
+from .serializers import EmployeeSerializer
 
 
 # Create your views here.
@@ -25,3 +28,8 @@ class NewBlogBView(CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+
+
+class EmplayeeDataView(ListAPIView):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
