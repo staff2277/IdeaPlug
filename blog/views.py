@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
 from rest_framework.generics import ListAPIView
+
 from .models import BlogPost, Employee
 from .serializers import EmployeeSerializer
 
@@ -33,3 +34,4 @@ class NewBlogBView(CreateView):
 class EmplayeeDataView(ListAPIView):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
+    permission_classes = [IsAuthenticated]
