@@ -1,22 +1,19 @@
-{% extends '_base.html' %}
-
-{% block title %}
-  Login
-{% endblock %}
-
-{% block content %}
-  {% if user.is_authenticated %}
-    <p>You are logged in as {{ user }}</p>
-    <form action="{% url 'logout' %}" method="post">
-      {% csrf_token %}
-      <button type="submit">Logout</button>
-    </form>
-  {% else %}
-    <form action="{% url 'login' %}" method="POST">
-      {% csrf_token %} {{ form.as_p }}
-      <p>You are logged out</p>
-      <input class="px-7 py-2 bg-green-400 hover:cursor-pointer hover:bg-green-300 rounded" type="submit" value="Login" />
-      <input type="hidden" name="next" value="{{ next }}" />
-    </form>
-  {% endif %}
-{% endblock %}
+{% extends '_base.html' %} {% block title %} Login {% endblock %} {% block
+content %} {% if user.is_authenticated %}
+<p>You are logged in as {{ user }}</p>
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Logou</button>
+</form>
+{% else %}
+<form action="{% url 'login' %}" method="POST">
+  {% csrf_token %} {{ form.as_p }}
+  <p>You are logged out</p>
+  <input
+    class="px-7 py-2 bg-green-400 hover:cursor-pointer hover:bg-green-300 rounded"
+    type="submit"
+    value="Login"
+  />
+  <input type="hidden" name="next" value="{{ next }}" />
+</form>
+{% endif %} {% endblock %}
